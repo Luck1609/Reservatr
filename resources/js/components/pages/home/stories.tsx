@@ -40,7 +40,7 @@ export default function Stories() {
               ))}
             </div>
             <blockquote className="mt-6 max-w-2xl text-2xl leading-tight font-semibold tracking-[-0.04em] text-[#29464a] sm:text-3xl">
-              “Before Book Me, my DMs were full of ‘are you free on Saturday?’
+              “Before Reservatr, my DMs were full of ‘are you free on Saturday?’
               Now clients choose a time, pay their deposit, and I can focus on
               making them feel beautiful.”
             </blockquote>

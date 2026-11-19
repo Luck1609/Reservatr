@@ -193,7 +193,7 @@ export default function ClientNotificationSettings() {
               Notification settings
             </h1>
             <p className="mt-2 max-w-xl text-sm leading-6 text-[#70908a] dark:text-[#9cb8b1]">
-              Choose how BookMe keeps you in the loop, from the first booking
+              Choose how Reservatr keeps you in the loop, from the first booking
               confirmation to the final appointment reminder.
             </p>
           </div>
@@ -224,12 +224,12 @@ export default function ClientNotificationSettings() {
               onToggle={toggleSetting}
             />
             <NotificationGroup
-              title="From BookMe"
+              title="From Reservatr"
               description="Optional ideas to make your next booking even easier."
               options={[
                 {
                   key: 'bookMeUpdates',
-                  title: 'BookMe updates and tips',
+                  title: 'Reservatr updates and tips',
                   description:
                     'Occasional product news, helpful tips, and local service inspiration.',
                   icon: Sparkles,

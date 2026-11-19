@@ -40,11 +40,11 @@ class SocialAuthController extends Controller
     ): RedirectResponse {
         $provider = $this->validatedProvider($provider);
         $socialUser = Socialite::driver($provider)->user();
-        
+
         $socialUserData = [
             'provider' => $provider,
             'provider_id' => (string) $socialUser->getId(),
-            'name' => (string) ($socialUser->getName() ?: $socialUser->getNickname() ?: 'Book Me user'),
+            'name' => (string) ($socialUser->getName() ?: $socialUser->getNickname() ?: 'Reservatr user'),
             'avatar' => $socialUser->getAvatar(),
         ];
 

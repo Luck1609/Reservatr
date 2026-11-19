@@ -90,7 +90,7 @@ export default function Login({ status }: { status?: string }) {
         <SocialAuthButtons />
 
         <p className="mt-6 text-center text-sm text-[#718282]">
-          New to Book Me?{' '}
+          New to Reservatr?{' '}
           <Link
             href={register()}
             tabIndex={6}

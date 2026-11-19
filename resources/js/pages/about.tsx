@@ -29,7 +29,7 @@ const values = [
   {
     title: 'Room to grow',
     description:
-      'Book Me should feel useful on day one and still feel like the right fit as your work gets bigger.',
+      'Reservatr should feel useful on day one and still feel like the right fit as your work gets bigger.',
     icon: Sparkles,
     color: 'bg-[#ece8ff] text-[#6253c7]',
   },
@@ -38,7 +38,7 @@ const values = [
 export default function About() {
   return (
     <>
-      <Head title="About Book Me" />
+      <Head title="About Reservatr" />
 
       <section className="relative isolate px-5 pt-16 pb-20 sm:px-8 sm:pt-24 sm:pb-28 lg:px-12">
         <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
@@ -48,14 +48,14 @@ export default function About() {
         <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div>
             <p className="mb-5 text-[11px] font-bold tracking-[0.14em] text-[#0f8a62] uppercase">
-              About Book Me
+              About Reservatr
             </p>
             <h1 className="max-w-2xl text-[clamp(2.9rem,6vw,5.7rem)] leading-[0.98] font-bold tracking-[-0.07em] text-[#17343c]">
               Scheduling should feel like{' '}
               <span className="text-[#0f8a62]">hospitality.</span>
             </h1>
             <p className="mt-7 max-w-xl text-base leading-7 text-[#6c7d7e] sm:text-lg sm:leading-8">
-              Book Me gives independent professionals and growing teams more
+              Reservatr gives independent professionals and growing teams more
               space to do meaningful work. We take care of the busywork around
               every appointment, so your clients feel looked after before they
               even walk through the door.
@@ -88,7 +88,7 @@ export default function About() {
                   </div>
                   <div>
                     <p className="text-xs font-bold text-white">
-                      The Book Me promise
+                      The Reservatr promise
                     </p>
                     <p className="mt-1 text-[10px] text-[#9bb4b2]">
                       More room for meaningful work
@@ -144,7 +144,7 @@ export default function About() {
               constant tending, and clients who had to work too hard to book.
             </p>
             <p className="mt-5">
-              Book Me was created to make that part feel lighter. The product is
+              Reservatr was created to make that part feel lighter. The product is
               practical, but the idea behind it is simple: when the details are
               handled thoughtfully, people have more energy for the work and
               relationships that matter most.
@@ -197,7 +197,7 @@ export default function About() {
                   </div>
                   <div>
                     <p className="text-xs font-bold text-[#394c4e]">
-                      Book Me team
+                      Reservatr team
                     </p>
                     <p className="mt-1 text-[10px] text-[#9ba5a2]">
                       A note from your support team
@@ -228,7 +228,7 @@ export default function About() {
             </h2>
             <p className="mt-6 max-w-lg text-base leading-7 text-[#7e7062]">
               From the first sketch to every feature we ship, we stay close to
-              the people using Book Me every day. Their feedback keeps the
+              the people using Reservatr every day. Their feedback keeps the
               product grounded, useful, and pleasantly human.
             </p>
             <div className="mt-8 flex items-center gap-6 text-sm text-[#6d736c]">

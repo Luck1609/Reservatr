@@ -20,7 +20,7 @@ const steps = [
   },
   {
     number: '03',
-    title: 'Let Book Me handle the rest',
+    title: 'Let Reservatr handle the rest',
     description:
       'Bookings, reminders, deposits, and changes stay organized automatically.',
     icon: CalendarCheck2,

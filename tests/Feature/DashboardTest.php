@@ -45,7 +45,7 @@ class DashboardTest extends TestCase
             'region_id' => $region->id,
             'district_id' => $district->id,
             'category_id' => $category->id,
-            'business_name' => 'Book Me Barbers',
+            'business_name' => 'Reservatr Barbers',
             'slug' => 'book-me-barbers',
             'description' => 'A modern barbershop.',
             'working_days' => ['monday'],
@@ -80,7 +80,7 @@ class DashboardTest extends TestCase
                 ->where('today.appointments.0.client', 'Jamie Client')
                 ->where('today.appointments.0.service', 'Haircut')
                 ->where('today.appointments.0.status', 'in-progress')
-                ->where('profile.business_name', 'Book Me Barbers')
+                ->where('profile.business_name', 'Reservatr Barbers')
                 ->has('weekly_revenue.days', 7));
     }
 }

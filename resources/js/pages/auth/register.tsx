@@ -128,5 +128,5 @@ Register.layout = {
   asDirectChild: false,
   title: 'Create your account',
   description:
-    'Set up your Book Me account and make space for more of the work you love.',
+    'Set up your Reservatr account and make space for more of the work you love.',
 };

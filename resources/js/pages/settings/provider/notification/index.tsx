@@ -232,7 +232,7 @@ export default function ProviderNotificationSettings() {
             />
 
             <NotificationGroup
-              title="From Book Me"
+              title="From Reservatr"
               description="Occasional ideas and updates to help your business grow."
               options={[
                 {

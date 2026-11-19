@@ -36,7 +36,7 @@ class OtpService
             'expires_at' => now()->addMinutes(10),
         ]);
 
-        $this->smsSender->send($phone, "Your Book Me verification code is {$code}.");
+        $this->smsSender->send($phone, "Your Reservatr verification code is {$code}.");
     }
 
     public function verify(string $phone, string $code): User

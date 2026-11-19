@@ -129,7 +129,7 @@ export default function OnboardingSuccess() {
         </div>
 
         <div className="absolute top-6 left-5 z-20 sm:top-8 sm:left-8">
-          <Link href={home()} aria-label="Book Me home">
+          <Link href={home()} aria-label="Reservatr home">
             <AppLogo />
           </Link>
         </div>
@@ -190,7 +190,7 @@ export default function OnboardingSuccess() {
               transition={{ delay: 0.45, duration: 0.55 }}
               className="mt-5 max-w-md text-sm leading-6 text-[#718081] sm:text-base"
             >
-              Your Book Me account is ready. Everything is set up so you can
+              Your Reservatr account is ready. Everything is set up so you can
               spend less time organizing and more time doing meaningful work.
             </motion.p>
 

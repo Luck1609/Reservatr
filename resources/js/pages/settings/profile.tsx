@@ -182,7 +182,7 @@ export default function Profile() {
       type: 'modal',
       title: 'Add a phone number',
       description:
-        'Add another number to your BookMe account and verify it by SMS.',
+        'Add another number to your Reservatr account and verify it by SMS.',
       content: <AddPhoneForm />,
     });
   };
@@ -213,7 +213,7 @@ export default function Profile() {
               Personal profile
             </h1>
             <p className="mt-2 max-w-xl text-sm leading-6 text-[#70908a] dark:text-[#9cb8b1]">
-              Keep your account details current so your BookMe workspace always
+              Keep your account details current so your Reservatr workspace always
               feels like yours.
             </p>
           </div>
@@ -317,7 +317,7 @@ export default function Profile() {
                   Personal information
                 </h3>
                 <p className="mt-1 text-sm text-[#70908a] dark:text-[#9cb8b1]">
-                  These details are used to identify you across your BookMe
+                  These details are used to identify you across your Reservatr
                   account.
                 </p>
               </div>

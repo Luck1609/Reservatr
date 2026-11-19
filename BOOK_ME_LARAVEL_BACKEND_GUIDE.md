@@ -1,6 +1,6 @@
-# Book Me: Laravel Backend Implementation Guide
+# Reservatr: Laravel Backend Implementation Guide
 
-This guide explains how to build the Laravel backend for **Book Me**, an appointment-booking platform for clients and service providers. The initial target is the web application, but the backend should expose a versioned API so the same system can later serve the mobile app and PWA.
+This guide explains how to build the Laravel backend for **Reservatr**, an appointment-booking platform for clients and service providers. The initial target is the web application, but the backend should expose a versioned API so the same system can later serve the mobile app and PWA.
 
 ## 1. Product scope
 
@@ -52,7 +52,7 @@ php artisan storage:link
 Configure `.env`:
 
 ```env
-APP_NAME="Book Me"
+APP_NAME="Reservatr"
 APP_ENV=local
 APP_URL=http://localhost:8000
 

@@ -68,7 +68,7 @@ export default function LegalPage({
             </div>
             <div>
               <p className="text-[11px] font-bold tracking-[0.14em] text-[#72d5ac] uppercase">
-                Book Me legal
+                Reservatr legal
               </p>
               <h1 className="mt-3 text-4xl leading-[1.04] font-bold tracking-[-0.06em] sm:text-6xl">
                 {title}
@@ -104,7 +104,7 @@ export default function LegalPage({
           </aside>
           <article className="max-w-3xl space-y-10 rounded-[26px] border border-[#e4ece7] bg-white p-6 shadow-[0_16px_35px_rgba(45,86,68,0.05)] sm:p-10">
             <div className="rounded-2xl border border-[#f2dfc2] bg-[#fff8ed] px-5 py-4 text-sm leading-6 text-[#806f5e]">
-              This page is a starter template for Book Me. Replace the marked
+              This page is a starter template for Reservatr. Replace the marked
               business details, confirm the data practices described here, and
               have the final version reviewed for the laws that apply to your
               business before publishing.

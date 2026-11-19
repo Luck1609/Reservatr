@@ -28,7 +28,7 @@ const contactOptions = [
     href: 'mailto:support@bookme.app',
   },
   {
-    title: 'Explore Book Me',
+    title: 'Explore Reservatr',
     detail: 'Start free, no card needed',
     note: 'See the product for yourself',
     icon: Sparkles,
@@ -46,7 +46,7 @@ const faqs = [
     'Absolutely. Tell us what you are using and we will help you find the smoothest path over.',
   ],
   [
-    'Is Book Me right for my type of business?',
+    'Is Reservatr right for my type of business?',
     'If your work involves appointments, consultations, classes, or client meetings, we would love to show you around.',
   ],
 ];
@@ -57,7 +57,7 @@ export default function Contact() {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const subject = encodeURIComponent(`Book Me enquiry from ${form.name}`);
+    const subject = encodeURIComponent(`Reservatr enquiry from ${form.name}`);
     const body = encodeURIComponent(
       `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`,
     );
@@ -67,7 +67,7 @@ export default function Contact() {
 
   return (
     <>
-      <Head title="Contact Book Me" />
+      <Head title="Contact Reservatr" />
 
       <section className="relative isolate px-5 pt-16 pb-20 sm:px-8 sm:pt-24 sm:pb-28 lg:px-12">
         <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
@@ -77,14 +77,14 @@ export default function Contact() {
         <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
           <div className="pt-4">
             <p className="mb-5 text-[11px] font-bold tracking-[0.14em] text-[#0f8a62] uppercase">
-              Contact Book Me
+              Contact Reservatr
             </p>
             <h1 className="max-w-xl text-[clamp(2.9rem,6vw,5.7rem)] leading-[0.98] font-bold tracking-[-0.07em] text-[#17343c]">
               Let&apos;s make your day feel{' '}
               <span className="text-[#0f8a62]">lighter.</span>
             </h1>
             <p className="mt-7 max-w-md text-base leading-7 text-[#6c7d7e] sm:text-lg sm:leading-8">
-              Questions, ideas, or just want to see if Book Me is a good fit? We
+              Questions, ideas, or just want to see if Reservatr is a good fit? We
               are here and happy to help.
             </p>
             <div className="mt-10 flex items-center gap-3 text-sm text-[#738383]">

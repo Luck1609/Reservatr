@@ -358,7 +358,7 @@ export default function BookingShow({
                     </span>
                   </DetailRow>
                   <DetailRow icon={MapPin} label="Location">
-                    <span>BookMe Studio</span>
+                    <span>Reservatr Studio</span>
                     <span className="mt-1 block text-xs font-medium text-[#70908a] dark:text-[#9cb8b1]">
                       124 Craftsmanship Way, Suite 4B
                     </span>

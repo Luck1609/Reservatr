@@ -37,7 +37,7 @@ const steps = [
   },
   {
     number: '03',
-    title: 'Let Book Me handle the rest',
+    title: 'Let Reservatr handle the rest',
     description:
       'Bookings, reminders, payments, and changes stay organized automatically.',
     icon: CalendarCheck2,
@@ -214,7 +214,7 @@ export default function Welcome() {
               <span className="text-[#0f8a62]">matters.</span>
             </h1>
             <p className="mx-auto mt-7 max-w-2xl text-base leading-7 text-[#6c7d7e] sm:text-lg sm:leading-8">
-              Book Me makes scheduling feel effortless. Give clients a beautiful
+              Reservatr makes scheduling feel effortless. Give clients a beautiful
               way to book, while you stay focused on doing your best work.
             </p>
             <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -516,7 +516,7 @@ export default function Welcome() {
                 ))}
               </div>
               <blockquote className="mt-6 max-w-2xl text-2xl leading-tight font-semibold tracking-[-0.04em] text-[#29464a] sm:text-3xl">
-                “Book Me took the awkward back-and-forth out of my business.
+                “Reservatr took the awkward back-and-forth out of my business.
                 Clients book when they’re ready, and I get to focus on the work
                 I’m actually here to do.”
               </blockquote>

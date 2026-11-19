@@ -2,10 +2,10 @@ import AppLogoIcon from '@/components/app-logo-icon';
 
 export function AppLogo() {
   return (
-    <div className="flex items-center gap-2.5">
-      <AppLogoIcon />
+    <div className="flex items-center gap-1">
+      <AppLogoIcon className="size-10" />
       <span className="text-[1.15rem] font-bold tracking-[-0.04em] text-[#162d35] dark:text-white">
-        Book<span className="text-[#0f8a62]">Me</span>
+        Reservatr
       </span>
     </div>
   );

@@ -98,7 +98,7 @@ class FoundationTest extends TestCase
         $token = $provider->createToken('test')->plainTextToken;
 
         $profile = $this->withToken($token)->postJson('/api/v1/provider/profile', [
-            'business_name' => 'Book Me Barbers',
+            'business_name' => 'Reservatr Barbers',
             'slug' => 'book-me-barbers',
         ])->assertCreated()->json('data');
 

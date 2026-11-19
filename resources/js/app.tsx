@@ -1,4 +1,7 @@
 import { createInertiaApp } from '@inertiajs/react';
+import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
 import { Toaster } from '@/components/ui/sonner';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { initializeTheme } from '@/hooks/use-appearance';
@@ -10,6 +13,11 @@ import GuestLayout from './layouts/guest';
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
 createInertiaApp({
+  resolve: (name) =>
+    resolvePageComponent(
+      `./pages/${name}.tsx`,
+      import.meta.glob('./pages/**/*.tsx'),
+    ),
   title: (title) => (title ? `${title} - ${appName}` : appName),
   layout: (name) => {
     switch (true) {
@@ -26,13 +34,14 @@ createInertiaApp({
         return GuestLayout;
     }
   },
-  strictMode: true,
-  withApp(app) {
-    return (
-      <TooltipProvider delayDuration={0}>
-        {app}
-        <Toaster />
-      </TooltipProvider>
+  setup({ el, App, props }) {
+    createRoot(el).render(
+      <StrictMode>
+        <TooltipProvider delayDuration={0}>
+          <App {...props} />
+          <Toaster />
+        </TooltipProvider>
+      </StrictMode>,
     );
   },
   progress: {

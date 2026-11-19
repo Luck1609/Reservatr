@@ -30,7 +30,7 @@ export default function Hero() {
             <span className="text-[#0f8a62]">full calendar.</span>
           </h1>
           <p className="mx-auto mt-7 max-w-2xl text-base leading-7 text-[#6c7d7e] sm:text-lg sm:leading-8">
-            Book Me helps Ghanaian salons, barbers, stylists, photographers,
+            Reservatr helps Ghanaian salons, barbers, stylists, photographers,
             coaches, and studios turn “please send your MoMo” into a smooth
             booking experience.
           </p>

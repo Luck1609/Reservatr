@@ -1,38 +1,66 @@
-name: tests
+name: Publish app to production
 
 on:
   push:
     branches:
-      - main
-  pull_request:
-
-permissions:
-  contents: read
+      - stage
 
 jobs:
-  ci:
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Action
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          persist-credentials: false
+    - uses: actions/checkout@v4
 
-      - name: Setup PHP
-        uses: shivammathur/setup-php@f3e473d116dcccaddc5834248c87452386958240 # v2
-        with:
-          php-version: '8.3'
-          tools: composer:v2
-          coverage: none
+    # Set up PHP and Composer
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.4'
+        tools: 'composer'
 
-      - name: Setup Node
-        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
-        with:
-          node-version: '22'
+    - name: Install Composer dependencies
+      run: composer install --no-progress --no-suggest --prefer-dist
 
-      - name: Setup Application
-        run: composer setup
+    # Set up Node.js
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '24'
 
-      - name: Run CI Checks
-        run: composer ci:check
+    # Install bun dependencies
+    - name: Install bun dependencies
+      run: bun install
+
+    # Build frontend assets
+    - name: Build assets
+      run: bun run build
+
+    # Remove node_modules after build
+    - name: Remove node_modules
+      run: rm -rf node_modules
+
+    # Remove vendor after build
+    - name: Remove vendor dir
+      run: rm -rf vendor
+
+    - name: Remove tests dir
+      run: rm -rf tests
+
+    - name: Remove vendor dir
+      run: rm -rf vendor
+
+    - name: Remove .git dir
+      run: rm -rf .git
+
+    - name: Remove .github dir
+      run: rm -rf .github
+
+    # FTP deploy
+    - name: FTP-Deploy-Action
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        server: ftp.homesteller.com
+        # server: premium57.web-hosting.com
+        username: ${{ secrets.STAGE_USERNAME }}
+        password: ${{ secrets.STAGE_SECRET }}

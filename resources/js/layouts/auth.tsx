@@ -50,7 +50,7 @@ export default function AuthLayout({
 
             <Link
               href={home()}
-              aria-label="Book Me home"
+              aria-label="Reservatr home"
               className="relative z-10 flex w-fit items-center gap-2.5"
             >
               <AppLogoIcon />
@@ -73,7 +73,7 @@ export default function AuthLayout({
                 Make room for work that matters.
               </h2>
               <p className="mt-5 max-w-md text-sm leading-6 text-[#b8c9c7]">
-                Book Me keeps your availability, clients, and appointments in
+                Reservatr keeps your availability, clients, and appointments in
                 one thoughtful place.
               </p>
 
@@ -142,7 +142,7 @@ export default function AuthLayout({
             <header className="flex items-center justify-between px-5 py-5 sm:px-8 lg:px-12 lg:py-7">
               <Link
                 href={home()}
-                aria-label="Book Me home"
+                aria-label="Reservatr home"
                 className="lg:hidden"
               >
                 <div className="flex items-center gap-2.5">
@@ -174,7 +174,7 @@ export default function AuthLayout({
               >
                 <div className="mb-8">
                   <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#c7e8d8] bg-[#effaf4] px-3 py-1.5 text-[10px] font-bold tracking-[0.12em] text-[#0f8a62] uppercase">
-                    <Sparkles aria-hidden="true" className="size-3" /> Book Me
+                    <Sparkles aria-hidden="true" className="size-3" /> Reservatr
                     account
                   </div>
                   <h1 className="text-3xl leading-tight font-bold tracking-[-0.055em] text-emerald-950 sm:text-4xl">

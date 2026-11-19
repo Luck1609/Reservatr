@@ -103,7 +103,7 @@ const trendingProviders: ServiceProvider[] = [
     price: 'From GHS 180',
     initials: 'SL',
     accent: 'from-[#d9eef2] to-[#f4e0c8]',
-    tag: 'New on Book Me',
+    tag: 'New on Reservatr',
   },
   {
     name: 'Kumasi Lens House',

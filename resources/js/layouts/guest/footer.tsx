@@ -87,7 +87,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-12 flex flex-col justify-between gap-3 border-t border-[#e6eeea] pt-6 text-xs text-[#93a19f] sm:flex-row">
-          <p>© {new Date().getFullYear()} Book Me. Made for better days.</p>
+          <p>© {new Date().getFullYear()} Reservatr. Made for better days.</p>
           <div className="flex gap-5">
             <Link className="hover:text-[#0f8a62]" href={privacy()}>
               Privacy

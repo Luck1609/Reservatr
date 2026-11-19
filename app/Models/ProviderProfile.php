@@ -13,13 +13,13 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
-use Spatie\Sluggable\HasSlug;
-use Spatie\Sluggable\SlugOptions;
+use Spatie\Sluggable\Attributes\Sluggable;
 
+#[Sluggable(from: 'business_name', to: 'slug')]
 class ProviderProfile extends Model implements HasMedia
 {
     /** @use HasFactory<ProviderProfileFactory> */
-    use HasFactory, HasSlug, HasUuids, InteractsWithMedia;
+    use HasFactory, HasUuids, InteractsWithMedia;
 
     protected $fillable = [
         'user_id',
@@ -55,13 +55,6 @@ class ProviderProfile extends Model implements HasMedia
             'works_on_holidays' => 'boolean',
             'is_accepting_bookings' => 'boolean',
         ];
-    }
-
-    public function getSlugOptions(): SlugOptions
-    {
-        return SlugOptions::create()
-            ->generateSlugsFrom('business_name')
-            ->saveSlugsTo('slug');
     }
 
     public function registerMediaCollections(): void

@@ -25,7 +25,7 @@ class NotificationController extends Controller
         'waitlist_available' => ['category' => 'Waitlist updates', 'title' => 'Time slot available', 'description' => 'Invite waitlisted clients to book an available time.', 'timing' => 'When a waitlist slot opens', 'channels' => ['sms'], 'message' => 'Good news, {client_name}! A time is now available for {service_name}. Book it before it is gone.'],
         'rebook_after_visit' => ['category' => 'Increase bookings', 'title' => 'Reminder to rebook', 'description' => 'Bring clients back after their last appointment.', 'timing' => 'After a completed appointment', 'channels' => ['email'], 'message' => 'Hi {client_name}, ready for your next {service_name}? We would love to see you again.'],
         'new_client_welcome' => ['category' => 'Celebrate milestones', 'title' => 'Welcome new clients', 'description' => 'Make a great first impression with a warm welcome.', 'timing' => 'After a client’s first appointment', 'channels' => ['email'], 'message' => 'Welcome to {business_name}, {client_name}! Thank you for choosing us. We look forward to seeing you again.'],
-        'new_chat_message' => ['category' => 'Client messages', 'title' => 'New chat message', 'description' => 'Let clients know when you reply through Book Me.', 'timing' => 'When you send a chat message', 'channels' => ['email'], 'message' => 'Hi {client_name}, you have a new message from {business_name}.'],
+        'new_chat_message' => ['category' => 'Client messages', 'title' => 'New chat message', 'description' => 'Let clients know when you reply through Reservatr.', 'timing' => 'When you send a chat message', 'channels' => ['email'], 'message' => 'Hi {client_name}, you have a new message from {business_name}.'],
     ];
 
     /**

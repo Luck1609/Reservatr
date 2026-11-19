@@ -33,7 +33,7 @@ export default function SocialEmail({ provider }: SocialEmailProps) {
             />
             <p>
               {provider} did not provide an email address. Add one to finish
-              creating your Book Me account.
+              creating your Reservatr account.
             </p>
           </div>
 
@@ -73,5 +73,5 @@ SocialEmail.layout = {
   asDirectChild: false,
   title: 'One last step',
   description:
-    'Add your email so we can secure your account and keep you connected to Book Me.',
+    'Add your email so we can secure your account and keep you connected to Reservatr.',
 };

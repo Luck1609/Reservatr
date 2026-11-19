@@ -4,14 +4,14 @@ export default function PrivacyPolicy() {
   return (
     <LegalPage
       title="Privacy policy"
-      description="This notice explains what information Book Me may collect, why we use it, and the choices available to you when you use our website and scheduling service."
+      description="This notice explains what information Reservatr may collect, why we use it, and the choices available to you when you use our website and scheduling service."
       lastUpdated="August 20, 2026"
     >
       <LegalSection number="01" title="Who we are">
         <p>
-          Book Me is a scheduling platform for service businesses and their
-          clients. In this policy, “Book Me,” “we,” or “us” means the operator
-          of the Book Me service. Add the full legal name, registered address,
+          Reservatr is a scheduling platform for service businesses and their
+          clients. In this policy, “Reservatr,” “we,” or “us” means the operator
+          of the Reservatr service. Add the full legal name, registered address,
           and privacy contact for the operating entity before launch.
         </p>
         <p>
@@ -27,7 +27,7 @@ export default function PrivacyPolicy() {
       </LegalSection>
 
       <LegalSection number="02" title="Information we collect">
-        <p>Depending on how you use Book Me, we may collect:</p>
+        <p>Depending on how you use Reservatr, we may collect:</p>
         <ul className="list-disc space-y-2 pl-5">
           <li>
             Account details such as your name, email address, password, business
@@ -53,7 +53,7 @@ export default function PrivacyPolicy() {
       </LegalSection>
 
       <LegalSection number="03" title="How we use information">
-        <p>We use information to provide and maintain Book Me, including to:</p>
+        <p>We use information to provide and maintain Reservatr, including to:</p>
         <ul className="list-disc space-y-2 pl-5">
           <li>
             Create and secure accounts, authenticate users, and provide customer
@@ -77,7 +77,7 @@ export default function PrivacyPolicy() {
           </li>
           <li>
             Meet legal obligations and protect the rights, safety, and property
-            of Book Me and our users.
+            of Reservatr and our users.
           </li>
         </ul>
         <p>
@@ -126,13 +126,13 @@ export default function PrivacyPolicy() {
 
       <LegalSection number="06" title="Cookies, children, and changes">
         <p>
-          Book Me may use necessary cookies and similar technologies to keep the
+          Reservatr may use necessary cookies and similar technologies to keep the
           service working, remember preferences, understand usage, and improve
           the experience. Add a cookie notice and consent controls if your use
           of non-essential cookies requires them.
         </p>
         <p>
-          Book Me is not directed to children under the minimum age permitted by
+          Reservatr is not directed to children under the minimum age permitted by
           applicable law. We do not knowingly collect personal information from
           children without appropriate authorization.
         </p>

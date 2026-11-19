@@ -6,7 +6,6 @@ import {
   Clock3,
   Globe2,
   Heart,
-  Instagram,
   MapPin,
   MessageCircle,
   Phone,
@@ -489,13 +488,13 @@ export function ProviderDetails({ provider }: ProviderDetailsProps) {
                 <MessageCircle className="size-4" />
                 Message
               </a>
-              <a
+              {/* <a
                 href="#social"
                 className="inline-flex items-center gap-2 hover:text-[#0f8a62]"
               >
                 <Instagram className="size-4" />
                 Instagram
-              </a>
+              </a> */}
             </div>
           </aside>
         </div>

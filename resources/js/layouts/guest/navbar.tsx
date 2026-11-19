@@ -36,7 +36,7 @@ export default function Navbar({
           container,
         )}
       >
-        <Link href={home()} aria-label="Book Me home" onClick={closeMenu}>
+        <Link href={home()} aria-label="Reservatr home" onClick={closeMenu}>
           <AppLogo />
         </Link>
 

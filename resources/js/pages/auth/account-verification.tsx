@@ -2,7 +2,7 @@ import { Head, Link, useForm } from '@inertiajs/react';
 import { LogOut } from 'lucide-react';
 import type { FormEvent } from 'react';
 import { PasswordResetIcon } from '@/assets/icons';
-import background from '@/assets/images/verify.webp';
+// import background from '@/assets/images/verify.webp';
 import { OTP } from '@/components/form/otp';
 import SubmitButton from '@/components/form/submit-button';
 import { Button } from '@/components/ui/button';
@@ -68,5 +68,5 @@ AccountVerification.layout = {
   asDirectChild: false,
   title: 'Email verification',
   description: 'Please verify your email address by typing in your OTP',
-  backgroundImage: background,
+  // backgroundImage: background,
 };

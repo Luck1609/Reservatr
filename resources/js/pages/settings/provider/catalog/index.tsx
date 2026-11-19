@@ -131,7 +131,7 @@ export default function CatalogSettings({ categories = [] }: PageProps) {
             </h1>
             <p className="mt-2 max-w-xl text-sm leading-6 text-[#70908a] dark:text-[#9cb8b1]">
               Create your own groups for the services you provide. These are
-              separate from Book Me&apos;s main provider categories.
+              separate from Reservatr&apos;s main provider categories.
             </p>
           </div>
           <Button onClick={openCreateModal}>

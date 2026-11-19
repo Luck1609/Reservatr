@@ -211,7 +211,7 @@ export default function OnboardingForm() {
 
   return (
     <>
-      <Head title="Set up your Book Me profile" />
+      <Head title="Set up your Reservatr profile" />
 
       <div className="relative min-h-screen overflow-hidden bg-[#fbfcfa] text-[#17343c] selection:bg-[#bce9d4] selection:text-[#17343c]">
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -221,7 +221,7 @@ export default function OnboardingForm() {
 
         <header className="relative z-10 border-b border-[#e8eeeb]/80 bg-[#fbfcfa]/90 backdrop-blur-md">
           <div className="mx-auto flex h-19 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-12">
-            <Link href={home()} aria-label="Book Me home">
+            <Link href={home()} aria-label="Reservatr home">
               <AppLogo />
             </Link>
             <div className="flex items-center gap-2 text-xs text-[#7a8989] sm:gap-3 sm:text-sm">

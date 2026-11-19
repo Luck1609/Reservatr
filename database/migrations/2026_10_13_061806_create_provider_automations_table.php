@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('key');
             $table->boolean('enabled')->default(false);
             $table->text('message')->nullable();
-            $table->json('channels')->default(['email']);
+            $table->string('channel')->default('email');
+            $table->json('channels')->default(json_encode(['email']));
             $table->timestamps();
 
             $table->unique(['provider_profile_id', 'key']);

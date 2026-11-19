@@ -44,7 +44,7 @@ class AuthenticateSocialUser
 
         if (! $user) {
             $user = User::create([
-                'name' => $name ?: 'Book Me user',
+                'name' => $name ?: 'Reservatr user',
                 'email' => $email,
                 'social_platform' => $provider,
                 'social_platform_id' => $providerId,
