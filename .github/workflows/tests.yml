@@ -28,9 +28,15 @@ jobs:
       with:
         node-version: '24'
 
+    # Set up Bun
+    - name: Setup Bun
+      uses: oven-sh/setup-bun@v2
+      with:
+        bun-version: '1.3.14'
+
     # Install bun dependencies
     - name: Install bun dependencies
-      run: bun install
+      run: bun install --frozen-lockfile
 
     # Build frontend assets
     - name: Build assets
