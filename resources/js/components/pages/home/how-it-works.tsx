@@ -36,7 +36,7 @@ export default function HowItWorks() {
       <Container>
         <div className="grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
           <div>
-            <p className="mb-5 text-[11px] font-bold tracking-[0.14em] text-[#72d5ac] uppercase">
+            <p className="mb-5 text-[11px] font-bold tracking-[0.14em] text-primary uppercase">
               Your business, your rhythm
             </p>
             <h2 className="max-w-lg text-4xl leading-[1.04] font-bold tracking-[-0.055em] sm:text-5xl">

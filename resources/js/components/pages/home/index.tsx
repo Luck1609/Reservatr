@@ -26,7 +26,7 @@ const features = [
     description:
       'Keep your availability in one place and stop playing calendar ping-pong across Accra and beyond.',
     icon: CalendarDays,
-    color: 'bg-[#e3f6ee] text-[#0f8a62]',
+    color: 'bg-violet-200 text-[#0f8a62]',
   },
   {
     title: 'Clients book on their time',

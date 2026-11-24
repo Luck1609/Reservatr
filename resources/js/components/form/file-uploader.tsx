@@ -326,8 +326,8 @@ function UploaderButton<T extends object>({
         onDrop={handleDrop}
         onClick={handleBrowseClick}
         className={cn(
-          'flex flex-col justify-center space-y-4 rounded-xl border-2 border-dashed p-4 text-center transition-colors hover:bg-gray-100',
-          isDragging ? 'border-primary bg-primary/5' : 'border-gray-300',
+          'flex flex-col justify-center space-y-4 rounded-xl border-2 border-dashed p-4 text-center transition-colors hover:bg-input',
+          isDragging ? 'border-primary bg-primary/5' : 'border-input dark:bg-input/50',
           classNames?.wrapper,
         )}
       >
@@ -358,7 +358,7 @@ function UploaderButton<T extends object>({
             <>
               <h2
                 className={cn(
-                  'text-lg font-bold tracking-tight',
+                  'text-lg font-bold tracking-tight text-foreground',
                   classNames?.header?.title,
                 )}
               >
@@ -375,7 +375,7 @@ function UploaderButton<T extends object>({
                 </p>
               )}
               {maxFiles > 1 && (
-                <p className="text-xs text-gray-500">
+                <p className="text-xs text-foreground">
                   {files.length} / {maxFiles} files selected
                 </p>
               )}

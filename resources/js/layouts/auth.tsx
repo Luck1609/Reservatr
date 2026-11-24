@@ -7,6 +7,7 @@ import {
   Sparkles,
   Users,
 } from 'lucide-react';
+import AppLogo from '@/components/app-logo';
 import AppLogoIcon from '@/components/app-logo-icon';
 import { NoticeProvider } from '@/contexts/notice-context';
 import { cn } from '@/lib/utils';
@@ -29,14 +30,14 @@ export default function AuthLayout({
 
   return (
     <NoticeProvider>
-      <div className="min-h-screen bg-background px-4 py-4 text-[#17343c] selection:bg-[#bce9d4] selection:text-[#17343c] sm:px-6 lg:px-10 lg:py-6">
+      <div className="min-h-screen bg-background px-4 py-4 sm:px-6 lg:px-10 lg:py-6">
         <div
           className={cn(
             'max-h-[] mx-auto flex min-h-[calc(100dvh-2rem)] max-w-360 flex-col overflow-hidden rounded-4xl border border-[#e2ebe6] bg-card shadow-[0_24px_70px_rgba(34,60,70,0.12)] lg:grid lg:min-h-[calc(100dvh-3rem)] lg:grid-cols-[minmax(350px,0.86fr)_minmax(0,1.14fr)] dark:border-[#e2ebe6]/10',
             classNames?.wrapper,
           )}
         >
-          <aside className="relative hidden overflow-hidden bg-[#17343c] p-8 text-white lg:flex lg:flex-col lg:p-10 xl:p-12">
+          <aside className="relative hidden overflow-hidden p-8 text-white lg:flex lg:flex-col lg:p-10 xl:p-12">
             <div className="pointer-events-none absolute inset-0 overflow-hidden">
               <div className="absolute -top-24 -right-24 size-80 rounded-full bg-[#0f8a62]/35 blur-3xl" />
               <div className="absolute -bottom-36 -left-24 size-96 rounded-full bg-[#f0a46e]/20 blur-3xl" />
@@ -55,7 +56,7 @@ export default function AuthLayout({
             >
               <AppLogoIcon />
               <span className="text-[1.15rem] font-bold tracking-[-0.04em] text-white">
-                Book<span className="text-[#8fe0bb]">Me</span>
+                Reservatr
               </span>
             </Link>
 
@@ -99,7 +100,7 @@ export default function AuthLayout({
 
                 <div className="space-y-2.5 pt-3">
                   <div className="flex items-center gap-3 rounded-2xl bg-white/8 px-3 py-2.5">
-                    <span className="size-2 rounded-full bg-[#72d5ac]" />
+                    <span className="size-2 rounded-full bg-primary" />
                     <div className="min-w-0 flex-1">
                       <p className="truncate text-[10px] font-bold text-white">
                         Brand strategy call
@@ -111,7 +112,7 @@ export default function AuthLayout({
                     </div>
                     <Check
                       aria-hidden="true"
-                      className="size-4 text-[#72d5ac]"
+                      className="size-4 text-primary"
                     />
                   </div>
                   <div className="flex items-center gap-3 rounded-2xl bg-[#806edc]/20 px-3 py-2.5">
@@ -132,7 +133,7 @@ export default function AuthLayout({
               </div>
 
               <div className="mt-5 flex items-center gap-2 text-[10px] text-[#9bb2ae]">
-                <Users aria-hidden="true" className="size-3.5 text-[#72d5ac]" />
+                <Users aria-hidden="true" className="size-3.5 text-primary" />
                 Join teams building more space into their day.
               </div>
             </div>
@@ -145,12 +146,7 @@ export default function AuthLayout({
                 aria-label="Reservatr home"
                 className="lg:hidden"
               >
-                <div className="flex items-center gap-2.5">
-                  <AppLogoIcon />
-                  <span className="text-[1.15rem] font-bold tracking-[-0.04em] text-[#162d35]">
-                    Book<span className="text-[#0f8a62]">Me</span>
-                  </span>
-                </div>
+                <AppLogo />
               </Link>
               <div className="hidden lg:block" />
               <Link

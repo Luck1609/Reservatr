@@ -8,7 +8,7 @@ export default function CTA() {
     <section className="px-5 py-16 sm:px-8 sm:py-24 lg:px-12">
       <Container className="relative overflow-hidden rounded-[30px] bg-[#0f8a62] px-6 py-16 text-center text-white sm:px-12 sm:py-20">
         <div className="absolute -top-28 -left-20 size-72 rounded-full border-36 border-white/10" />
-        <div className="absolute -right-24 -bottom-40 size-96 rounded-full border-45 border-[#72d5ac]/20" />
+        <div className="absolute -right-24 -bottom-40 size-96 rounded-full border-45 border-primary/20" />
         <div className="relative">
           <Zap
             aria-hidden="true"

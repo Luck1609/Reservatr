@@ -88,7 +88,7 @@ export default function Contact() {
               are here and happy to help.
             </p>
             <div className="mt-10 flex items-center gap-3 text-sm text-[#738383]">
-              <div className="flex size-10 items-center justify-center rounded-full bg-[#e3f6ee] text-[#0f8a62]">
+              <div className="flex size-10 items-center justify-center rounded-full bg-violet-200 text-[#0f8a62]">
                 <Clock3 aria-hidden="true" className="size-4" />
               </div>
               <div>
@@ -115,7 +115,7 @@ export default function Contact() {
                   What can we help with?
                 </h2>
               </div>
-              <div className="flex size-11 items-center justify-center rounded-2xl bg-[#e3f6ee] text-[#0f8a62]">
+              <div className="flex size-11 items-center justify-center rounded-2xl bg-violet-200 text-[#0f8a62]">
                 <Send aria-hidden="true" className="size-5" />
               </div>
             </div>
@@ -128,7 +128,7 @@ export default function Contact() {
                   onChange={(event) =>
                     setForm({ ...form, name: event.target.value })
                   }
-                  className="h-12 rounded-xl border border-[#dfe9e3] bg-[#fbfcfa] px-4 text-sm font-normal text-[#17343c] transition outline-none focus:border-[#76c9a5] focus:ring-4 focus:ring-[#e3f6ee]"
+                  className="h-12 rounded-xl border border-[#dfe9e3] bg-[#fbfcfa] px-4 text-sm font-normal text-[#17343c] transition outline-none focus:border-[#76c9a5] focus:ring-4 focus:ring-violet-200"
                   placeholder="Jane Smith"
                 />
               </label>
@@ -141,7 +141,7 @@ export default function Contact() {
                   onChange={(event) =>
                     setForm({ ...form, email: event.target.value })
                   }
-                  className="h-12 rounded-xl border border-[#dfe9e3] bg-[#fbfcfa] px-4 text-sm font-normal text-[#17343c] transition outline-none focus:border-[#76c9a5] focus:ring-4 focus:ring-[#e3f6ee]"
+                  className="h-12 rounded-xl border border-[#dfe9e3] bg-[#fbfcfa] px-4 text-sm font-normal text-[#17343c] transition outline-none focus:border-[#76c9a5] focus:ring-4 focus:ring-violet-200"
                   placeholder="jane@studio.com"
                 />
               </label>
@@ -154,7 +154,7 @@ export default function Contact() {
                 onChange={(event) =>
                   setForm({ ...form, message: event.target.value })
                 }
-                className="min-h-36 resize-y rounded-xl border border-[#dfe9e3] bg-[#fbfcfa] px-4 py-3 text-sm leading-6 font-normal text-[#17343c] transition outline-none focus:border-[#76c9a5] focus:ring-4 focus:ring-[#e3f6ee]"
+                className="min-h-36 resize-y rounded-xl border border-[#dfe9e3] bg-[#fbfcfa] px-4 py-3 text-sm leading-6 font-normal text-[#17343c] transition outline-none focus:border-[#76c9a5] focus:ring-4 focus:ring-violet-200"
                 placeholder="Tell us what is on your mind..."
               />
             </label>
@@ -181,7 +181,7 @@ export default function Contact() {
               href={href}
             >
               <div className="flex items-start justify-between">
-                <div className="flex size-11 items-center justify-center rounded-2xl bg-[#e3f6ee] text-[#0f8a62]">
+                <div className="flex size-11 items-center justify-center rounded-2xl bg-violet-200 text-[#0f8a62]">
                   <Icon aria-hidden="true" className="size-5" />
                 </div>
                 <ArrowUpRight
@@ -204,7 +204,7 @@ export default function Contact() {
       <section className="bg-[#17343c] px-5 py-20 text-white sm:px-8 sm:py-28 lg:px-12">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
           <div>
-            <p className="mb-5 text-[11px] font-bold tracking-[0.14em] text-[#72d5ac] uppercase">
+            <p className="mb-5 text-[11px] font-bold tracking-[0.14em] text-primary uppercase">
               A few quick answers
             </p>
             <h2 className="max-w-md text-4xl leading-[1.05] font-bold tracking-[-0.055em] sm:text-5xl">

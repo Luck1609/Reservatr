@@ -50,7 +50,7 @@ const features = [
     description:
       'Keep your availability in one place and stop playing calendar ping-pong.',
     icon: CalendarDays,
-    color: 'bg-[#e3f6ee] text-[#0f8a62]',
+    color: 'bg-violet-200 text-[#0f8a62]',
   },
   {
     title: 'Clients book on their time',
@@ -175,7 +175,7 @@ function BookingPreview() {
       </div>
 
       <div className="absolute -right-4 bottom-8 flex items-center gap-2.5 rounded-2xl border border-white bg-white px-3.5 py-3 shadow-[0_15px_35px_rgba(34,60,70,0.16)] sm:-right-8">
-        <div className="flex size-8 items-center justify-center rounded-full bg-[#e3f6ee] text-[#0f8a62]">
+        <div className="flex size-8 items-center justify-center rounded-full bg-violet-200 text-[#0f8a62]">
           <Check aria-hidden="true" className="size-4" strokeWidth={3} />
         </div>
         <div>
@@ -283,7 +283,7 @@ export default function Welcome() {
         <Container>
           <div className="grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
             <div>
-              <p className="mb-5 text-[11px] font-bold tracking-[0.14em] text-[#72d5ac] uppercase">
+              <p className="mb-5 text-[11px] font-bold tracking-[0.14em] text-primary uppercase">
                 A simpler way to work
               </p>
               <h2 className="max-w-lg text-4xl leading-[1.04] font-bold tracking-[-0.055em] sm:text-5xl">
@@ -569,7 +569,7 @@ export default function Welcome() {
       <section className="px-5 py-16 sm:px-8 sm:py-24 lg:px-12">
         <Container className="relative overflow-hidden rounded-[30px] bg-[#0f8a62] px-6 py-16 text-center text-white sm:px-12 sm:py-20">
           <div className="absolute -top-28 -left-20 size-72 rounded-full border-36 border-white/10" />
-          <div className="absolute -right-24 -bottom-40 size-96 rounded-full border-45 border-[#72d5ac]/20" />
+          <div className="absolute -right-24 -bottom-40 size-96 rounded-full border-45 border-primary/20" />
           <div className="relative">
             <Zap
               aria-hidden="true"

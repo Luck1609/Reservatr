@@ -82,7 +82,7 @@ export function Input<T extends object>({
           <Label
             htmlFor={name}
             className={cn(
-              'text-xs font-medium text-[#70908a] dark:text-[#9cb8b1]',
+              'text-xs font-medium',
               classNames?.label,
             )}
           >

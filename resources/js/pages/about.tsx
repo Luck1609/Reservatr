@@ -17,7 +17,7 @@ const values = [
     description:
       'We design for real conversations, real businesses, and the people who make both happen.',
     icon: HeartHandshake,
-    color: 'bg-[#e3f6ee] text-[#0f8a62]',
+    color: 'bg-violet-200 text-[#0f8a62]',
   },
   {
     title: 'Clear over clever',
@@ -251,7 +251,7 @@ export default function About() {
       <section className="px-5 py-16 sm:px-8 sm:py-24 lg:px-12">
         <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[30px] bg-[#0f8a62] px-6 py-14 text-center text-white sm:px-12 sm:py-18">
           <div className="absolute -top-28 -left-20 size-72 rounded-full border-36 border-white/10" />
-          <div className="absolute -right-24 -bottom-40 size-96 rounded-full border-45 border-[#72d5ac]/20" />
+          <div className="absolute -right-24 -bottom-40 size-96 rounded-full border-45 border-primary/20" />
           <div className="relative">
             <h2 className="mx-auto max-w-2xl text-4xl leading-[1.04] font-bold tracking-[-0.055em] sm:text-5xl">
               Make more room for the work you love.

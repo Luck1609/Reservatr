@@ -172,7 +172,7 @@ function BookingPreview() {
       </div>
 
       <div className="absolute -right-4 bottom-8 flex items-center gap-2.5 rounded-2xl border border-white bg-white px-3.5 py-3 shadow-[0_15px_35px_rgba(34,60,70,0.16)] sm:-right-8">
-        <div className="flex size-8 items-center justify-center rounded-full bg-[#e3f6ee] text-[#0f8a62]">
+        <div className="flex size-8 items-center justify-center rounded-full bg-violet-200 text-[#0f8a62]">
           <Check aria-hidden="true" className="size-4" strokeWidth={3} />
         </div>
         <div>

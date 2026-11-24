@@ -20,13 +20,13 @@ export default function AccountSelection({
               <div className="flex flex-col items-center">
                 <div
                   className={cn(
-                    'bg-surface-container group-hover:text-on-primary mb-4 flex h-16 w-16 items-center justify-center rounded-full text-primary transition-colors group-hover:bg-primary',
+                    'mb-4 flex h-16 w-16 items-center justify-center rounded-full text-card-foreground transition-colors',
                     form.data.type === 'client' ? 'bg-primary/10' : '',
                   )}
                 >
                   <User aria-hidden="true" className="size-8" />
                 </div>
-                <h2 className="font-md text-md mb-2 text-center text-primary">
+                <h2 className="font-semibold text-lg mb-2 text-center text-foreground">
                   I am a Client
                 </h2>
               </div>
@@ -40,13 +40,13 @@ export default function AccountSelection({
               <div className="flex flex-col items-center">
                 <div
                   className={cn(
-                    'bg-surface-container group-hover:text-on-primary mb-6 flex h-16 w-16 items-center justify-center rounded-full text-primary transition-colors group-hover:bg-primary',
+                    'mb-6 flex h-16 w-16 items-center justify-center rounded-full text-card-foreground transition-colors',
                     form.data.type === 'provider' ? 'bg-primary/10' : '',
                   )}
                 >
                   <Store aria-hidden="true" className="size-8" />
                 </div>
-                <h2 className="font-md text-md mb-2 text-center text-primary">
+                <h2 className="font-semibold text-lg mb-2 text-center text-foreground">
                   I am a Service Provider
                 </h2>
               </div>
@@ -59,10 +59,10 @@ export default function AccountSelection({
         classNames={{
           container: 'flex flex-row gap-5',
           field: {
-            wrapper: 'bg-card lg:p-8',
+            wrapper: 'bg-muted lg:p-8',
             container: 'p-0! bg-overflow-hidden',
             label: 'overflow-hidden border-none font-semibold',
-            description: 'text-center text-sm',
+            description: 'text-center text-normal text-foreground',
           },
         }}
       />

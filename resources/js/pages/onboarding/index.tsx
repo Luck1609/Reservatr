@@ -3,13 +3,14 @@ import type {
   InertiaFormProps,
   InertiaPrecognitiveFormProps,
 } from '@inertiajs/react';
-import { ArrowRight, Check, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Check, ChevronLeft, ChevronRight, LogOut } from 'lucide-react';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { FormEvent } from 'react';
 import { store } from '@/actions/App/Http/Controllers/OnboardingController';
 import AppLogo from '@/components/app-logo';
 import SubmitButton from '@/components/form/submit-button';
 import { Button } from '@/components/ui/button';
+import ThemeToggle from '@/layouts/app/theme-toggler';
 import { cn, getNestedValue } from '@/lib/utils';
 import { home, login, privacy, terms } from '@/routes';
 import AccountSelection from './account-selection';
@@ -213,25 +214,23 @@ export default function OnboardingForm() {
     <>
       <Head title="Set up your Reservatr profile" />
 
-      <div className="relative min-h-screen overflow-hidden bg-[#fbfcfa] text-[#17343c] selection:bg-[#bce9d4] selection:text-[#17343c]">
-        <div className="pointer-events-none absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 size-120 rounded-full bg-[#dff4eb] blur-3xl" />
-          <div className="absolute bottom-0 -left-48 size-112 rounded-full bg-[#fff0d6] blur-3xl" />
-        </div>
+      <div className="relative min-h-screen overflow-hidden bg-background text-[#17343c] selection:bg-[#bce9d4] selection:text-[#17343c]">
 
-        <header className="relative z-10 border-b border-[#e8eeeb]/80 bg-[#fbfcfa]/90 backdrop-blur-md">
+        <header className="relative z-10 border-b border-input bg-card backdrop-blur-md">
           <div className="mx-auto flex h-19 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-12">
             <Link href={home()} aria-label="Reservatr home">
               <AppLogo />
             </Link>
-            <div className="flex items-center gap-2 text-xs text-[#7a8989] sm:gap-3 sm:text-sm">
-              <span className="hidden sm:inline">Already have an account?</span>
+            <div className="flex items-center gap-2 text-xs text-foreground sm:gap-3 sm:text-sm">
+              <span className="hidden sm:inline">Can't continue now?</span>
               <Link
-                className="inline-flex items-center gap-1.5 font-bold text-[#0f8a62] hover:text-[#0b7653]"
+                className="inline-flex items-center gap-1.5 font-bold text-violet-400 hover:text-primary"
                 href={login()}
               >
-                Log in <ArrowRight aria-hidden="true" className="size-3.5" />
+                <LogOut className="size-4" /> Logout
               </Link>
+
+              <ThemeToggle />
             </div>
           </div>
         </header>
@@ -252,17 +251,17 @@ export default function OnboardingForm() {
                 )}
               >
                 <div className="min-h-0 overflow-hidden">
-                  <div className="rounded-[26px] border border-[#e1ebe5] bg-white p-5 shadow-[0_16px_35px_rgba(45,86,68,0.06)] sm:p-7">
+                  <div className="rounded-[26px] border border-secondary bg-secondary p-5 shadow-[0_16px_35px_rgba(45,86,68,0.06)] sm:p-7">
                     <div className="flex items-center justify-between gap-4">
                       <div>
-                        <p className="text-[11px] font-bold tracking-[0.12em] text-[#0f8a62] uppercase">
+                        <p className="text-[11px] font-bold tracking-[0.12em] text-primary uppercase">
                           Profile setup
                         </p>
-                        <p className="mt-2 text-sm font-bold text-[#53696b]">
+                        <p className="mt-2 text-sm font-bold text-foreground">
                           Step {step + 1} of {formSteps.length}
                         </p>
                       </div>
-                      <span className="rounded-full bg-[#e3f6ee] px-3 py-1.5 text-[10px] font-bold text-[#0f8a62]">
+                      <span className="rounded-full bg-violet-200 text-primary dark:text-primary-foreground dark:bg-primary px-3 py-1.5 text-[10px] font-bold">
                         {Math.round(progressValue)}% complete
                       </span>
                     </div>
@@ -283,8 +282,8 @@ export default function OnboardingForm() {
                                 className={cn(
                                   'absolute top-3 left-1/2 h-px w-full',
                                   index < step
-                                    ? 'bg-[#72d5ac]'
-                                    : 'bg-[#e1ebe5]',
+                                    ? 'bg-primary'
+                                    : 'bg-violet-500',
                                 )}
                               />
                             )}
@@ -293,16 +292,16 @@ export default function OnboardingForm() {
                               className={cn(
                                 'relative z-10 flex size-6 items-center justify-center rounded-full text-[10px] font-bold transition sm:size-7',
                                 isComplete
-                                  ? 'bg-[#72d5ac] text-[#17343c]'
+                                  ? 'bg-primary'
                                   : isCurrent
-                                    ? 'bg-[#0f8a62] text-white ring-4 ring-[#e3f6ee]'
-                                    : 'border border-[#cbd9d2] bg-white text-[#7a8989]',
+                                    ? 'bg-primary text-violet-100 ring-4 ring-violet-200'
+                                    : 'bg-secondary border-2 border-violet-500 text-primary',
                               )}
                             >
                               {isComplete ? (
                                 <Check
                                   aria-hidden="true"
-                                  className="size-3.5"
+                                  className="size-3.5 text-violet-100"
                                   strokeWidth={3}
                                 />
                               ) : (
@@ -312,7 +311,7 @@ export default function OnboardingForm() {
                             <span
                               className={cn(
                                 'mt-2 hidden w-full truncate px-1 text-center text-[10px] font-semibold sm:block',
-                                isCurrent ? 'text-[#0f8a62]' : 'text-[#718081]',
+                                isCurrent ? 'text-primary' : 'text-foreground',
                               )}
                             >
                               {item.title.split('?')[0]}
@@ -325,12 +324,12 @@ export default function OnboardingForm() {
                 </div>
               </div>
 
-              <div className="flex-1 rounded-[26px] border border-[#e1ebe5] bg-white p-5 shadow-[0_16px_35px_rgba(45,86,68,0.06)] sm:p-8 lg:p-10">
+              <div className="flex-1 rounded-[26px] bg-card p-5 shadow-[0_16px_35px_rgba(45,86,68,0.06)] sm:p-8 lg:p-10">
                 <div className="max-w-2xl">
-                  <h2 className="text-3xl leading-[1.05] font-bold tracking-[-0.055em] text-[#17343c] sm:text-4xl">
+                  <h2 className="text-3xl leading-[1.05] font-bold tracking-[-0.055em] text-foreground sm:text-4xl">
                     {formSteps[step].title}
                   </h2>
-                  <p className="mt-3 text-sm leading-6 text-[#718081] sm:text-base">
+                  <p className="mt-3 text-sm leading-6 text-foreground sm:text-base">
                     {formSteps[step].description}
                   </p>
                 </div>
@@ -340,7 +339,7 @@ export default function OnboardingForm() {
                 </div>
               </div>
 
-              <div className="flex items-center justify-between gap-4 rounded-[26px] border border-[#e1ebe5] bg-white p-4 shadow-[0_16px_35px_rgba(45,86,68,0.06)] sm:p-5">
+              <div className="flex items-center justify-between gap-4 rounded-[26px] bg-card p-4 shadow-[0_16px_35px_rgba(45,86,68,0.06)] sm:p-5">
                 <Button
                   className="rounded-full border border-[#dce6e1] bg-white px-5 text-[#53696b] hover:bg-[#f3f8f5]"
                   disabled={step === 0}
@@ -354,14 +353,14 @@ export default function OnboardingForm() {
 
                 {showCompleteSetup ? (
                   <SubmitButton
-                    className="rounded-full bg-[#0f8a62] px-6 font-bold text-white shadow-[0_8px_18px_rgba(15,138,98,0.18)] hover:bg-[#0b7653]"
+                    className="rounded-full px-6 font-bold"
                     disabled={!canContinue || form.processing}
                     label="Complete setup"
                     form={form}
                   />
                 ) : (
                   <Button
-                    className="rounded-full bg-[#0f8a62] px-6 font-bold text-white shadow-[0_8px_18px_rgba(15,138,98,0.18)] hover:bg-[#0b7653]"
+                      className="rounded-full px-6 font-bold"
                     disabled={!canContinue || form.validating}
                     id="continue-btn"
                     onClick={() => handleNavigation(NavAction.INCREMENT)}
@@ -377,14 +376,14 @@ export default function OnboardingForm() {
           <p className="mt-8 text-center text-xs leading-5 text-[#91a09f]">
             By continuing, you agree to our{' '}
             <Link
-              className="font-semibold text-[#0f8a62] hover:underline"
+              className="font-semibold text-primary hover:underline"
               href={privacy()}
             >
               Privacy Policy
             </Link>{' '}
             and{' '}
             <Link
-              className="font-semibold text-[#0f8a62] hover:underline"
+              className="font-semibold text-primary hover:underline"
               href={terms()}
             >
               Terms and Conditions

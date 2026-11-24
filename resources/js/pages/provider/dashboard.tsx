@@ -152,7 +152,7 @@ export default function Dashboard() {
             <div className="relative flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
               <div>
                 <div className="mb-5 flex items-center gap-2 text-xs font-bold tracking-[0.16em] text-[#8fe0bb] uppercase">
-                  <span className="size-2 rounded-full bg-[#72d5ac]" />
+                  <span className="size-2 rounded-full bg-primary" />
                   {formatDate(date)}
                 </div>
 

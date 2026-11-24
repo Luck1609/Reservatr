@@ -25,7 +25,7 @@ export function LegalSection({
       id={`section-${number}`}
     >
       <div className="flex gap-4 sm:gap-6">
-        <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-[#e3f6ee] text-[11px] font-bold text-[#0f8a62]">
+        <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-violet-200 text-[11px] font-bold text-[#0f8a62]">
           {number}
         </span>
         <div className="min-w-0 flex-1">
@@ -53,7 +53,7 @@ export default function LegalPage({
 
       <section className="relative isolate overflow-hidden bg-[#17343c] px-5 pt-16 pb-16 text-white sm:px-8 sm:pt-24 sm:pb-20 lg:px-12">
         <div className="pointer-events-none absolute -top-48 -right-24 -z-10 size-136 rounded-full border-42 border-white/5" />
-        <div className="pointer-events-none absolute -bottom-64 -left-32 -z-10 size-120 rounded-full border-38 border-[#72d5ac]/10" />
+        <div className="pointer-events-none absolute -bottom-64 -left-32 -z-10 size-120 rounded-full border-38 border-primary/10" />
         <div className="mx-auto max-w-4xl">
           <Link
             className="inline-flex items-center gap-2 text-xs font-bold text-[#9fc2bd] transition hover:text-white"
@@ -67,7 +67,7 @@ export default function LegalPage({
               <ShieldCheck aria-hidden="true" className="size-5" />
             </div>
             <div>
-              <p className="text-[11px] font-bold tracking-[0.14em] text-[#72d5ac] uppercase">
+              <p className="text-[11px] font-bold tracking-[0.14em] text-primary uppercase">
                 Reservatr legal
               </p>
               <h1 className="mt-3 text-4xl leading-[1.04] font-bold tracking-[-0.06em] sm:text-6xl">
