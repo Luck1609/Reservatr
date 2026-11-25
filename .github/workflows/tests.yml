@@ -1,4 +1,4 @@
-name: Publish app to production
+name: Publish app to stage
 
 on:
   push:

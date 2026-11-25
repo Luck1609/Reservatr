@@ -4,14 +4,16 @@ namespace App\Enums;
 
 enum UserTypeEnum: string
 {
-  case Client = 'client';
-  case Provider = 'provider';
+    case Client = 'client';
+    case Provider = 'provider';
+    case Admin = 'admin';
 
-  public function label(): string
-  {
-    return match ($this) {
-      self::Client => 'Client',
-      self::Provider => 'Provider',
-    };
-  }
+    public function label(): string
+    {
+        return match ($this) {
+            self::Client => 'Client',
+            self::Provider => 'Provider',
+            self::Admin => 'admin'
+        };
+    }
 }

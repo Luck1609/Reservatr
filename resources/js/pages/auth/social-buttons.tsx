@@ -29,7 +29,7 @@ export default function SocialAuthButtons({
   className?: string;
 }) {
   return (
-    <div className={cn('mx-auto flex w-full justify-center gap-3', className)}>
+    <div className={cn('mx-auto flex flex-col md:flex-row w-full justify-center gap-3', className)}>
       {strategies.map((strategy) => (
         <Button
           key={strategy.value}
@@ -37,12 +37,12 @@ export default function SocialAuthButtons({
           variant="outline"
           // size="icon-lg"
           aria-label={`Continue with ${strategy.label}`}
-          className="border-[#dfe9e4] bg-white shadow-none hover:border-[#b5dfcb] hover:bg-[#f3faf6]"
+          className=""
           asChild
         >
           <a href={socialRedirect(strategy.value).url}>
             <img src={strategy.logo} alt="" className="size-5" />
-            <span className="font-medium">{strategy.label}</span>
+            <span className="font-medium">Continue with {strategy.label}</span>
           </a>
         </Button>
       ))}
@@ -58,9 +58,9 @@ export const AlternateLogin = ({ className }: { className?: string }) => {
         className,
       )}
     >
-      <div className="absolute h-px w-full bg-[#e8efeb]" />
-      <span className="relative z-1 bg-white px-3 text-xs font-semibold tracking-[0.08em] text-[#8a9a9b] uppercase">
-        Or continue with
+      <div className="absolute h-px w-full bg-secondary" />
+      <span className="relative z-1 bg-background px-3 text-xs font-semibold tracking-[0.08em] text-[#8a9a9b] uppercase">
+        Or
       </span>
     </div>
   );

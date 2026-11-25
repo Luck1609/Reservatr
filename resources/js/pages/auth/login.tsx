@@ -27,7 +27,7 @@ export default function Login({ status }: { status?: string }) {
 
       <form className="w-full" onSubmit={handleSubmit}>
         {status && (
-          <div className="mb-5 rounded-2xl border border-[#f3d5c6] bg-[#fff8f4] px-4 py-3 text-sm leading-5 text-[#9a5c3b]">
+          <div className="mb-5 rounded-2xl border border-destructive/30 bg-destructive/10 px-4 py-3 text-sm leading-5 text-destructive">
             {status}
           </div>
         )}
@@ -70,7 +70,7 @@ export default function Login({ status }: { status?: string }) {
 
             <Link
               href={request()}
-              className="text-right text-sm font-semibold text-[#0f8a62] transition-colors hover:text-[#0b7653] hover:underline"
+              className="text-right text-sm font-semibold text-primary transition-colors hover:text-primary/80 hover:underline"
               tabIndex={4}
             >
               Forgot password?
@@ -79,7 +79,7 @@ export default function Login({ status }: { status?: string }) {
 
           <SubmitButton
             label="Log in"
-            className="w-full rounded-xl bg-[#0f8a62] text-white shadow-[0_10px_22px_rgba(15,138,98,0.18)] hover:bg-[#0b7653]"
+            className="w-full rounded-xl bg-primary text-primary-foreground shadow-lg shadow-primary/20 hover:bg-primary/90"
             form={form}
             tabIndex={5}
           />
@@ -89,12 +89,12 @@ export default function Login({ status }: { status?: string }) {
 
         <SocialAuthButtons />
 
-        <p className="mt-6 text-center text-sm text-[#718282]">
+        <p className="mt-6 text-center text-sm text-muted-foreground">
           New to Reservatr?{' '}
           <Link
             href={register()}
             tabIndex={6}
-            className="font-bold text-[#0f8a62] transition-colors hover:text-[#0b7653] hover:underline"
+            className="font-bold text-primary transition-colors hover:text-primary/80 hover:underline"
           >
             Create an account
           </Link>
@@ -107,6 +107,9 @@ export default function Login({ status }: { status?: string }) {
 Login.layout = {
   asDirectChild: false,
   title: 'Welcome back',
+  // classNames: {
+  //   wrapper: 'lg:min-h-[70dvh]',
+  // },
   description:
     'Log in to keep your schedule moving and your day feeling clear.',
 };

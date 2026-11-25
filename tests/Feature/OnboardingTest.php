@@ -19,6 +19,15 @@ class OnboardingTest extends TestCase
             ->assertOk();
     }
 
+    public function test_onboarded_users_are_redirected_to_the_dashboard_from_onboarding(): void
+    {
+        $user = User::factory()->create(['has_onboarded' => true]);
+
+        $this->actingAs($user)
+            ->get(route('onboarding'))
+            ->assertRedirect(route('dashboard'));
+    }
+
     public function test_guests_are_redirected_to_login_before_onboarding_is_checked(): void
     {
         $this->get(route('dashboard'))

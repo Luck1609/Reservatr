@@ -240,7 +240,7 @@ export default function FileUploader<T extends object>({
 
   return (
     <>
-      {label && <Label className="mb-1">{label}</Label>}
+      {label && <Label className="mb-1 text-foreground">{label}</Label>}
 
       <input
         ref={fileInputRef}
@@ -285,7 +285,9 @@ export default function FileUploader<T extends object>({
 
       {/* Validation error display */}
       {hasError && (
-        <small className={cn('mt-1 text-sm text-red-500', classNames?.wrapper)}>
+        <small
+          className={cn('mt-1 text-sm text-destructive', classNames?.wrapper)}
+        >
           {error}
         </small>
       )}
@@ -326,8 +328,8 @@ function UploaderButton<T extends object>({
         onDrop={handleDrop}
         onClick={handleBrowseClick}
         className={cn(
-          'flex flex-col justify-center space-y-4 rounded-xl border-2 border-dashed p-4 text-center transition-colors hover:bg-input',
-          isDragging ? 'border-primary bg-primary/5' : 'border-input dark:bg-input/50',
+          'flex flex-col justify-center space-y-4 rounded-xl border-2 border-dashed border-input bg-card p-4 text-center transition-colors hover:border-primary/40 hover:bg-muted/50',
+          isDragging ? 'border-primary bg-primary/5' : 'dark:bg-input/30',
           classNames?.wrapper,
         )}
       >
@@ -367,7 +369,7 @@ function UploaderButton<T extends object>({
               {description && (
                 <p
                   className={cn(
-                    'font-body text-sm text-accent-foreground',
+                    'font-body text-sm text-muted-foreground',
                     classNames?.header?.description,
                   )}
                 >
@@ -407,13 +409,13 @@ export const FilePreviewCard = ({
   return (
     <div
       className={cn(
-        'group flex items-center gap-4 rounded-xl border p-3 transition-colors hover:border-gray-400',
+        'group flex items-center gap-4 rounded-xl border border-border bg-card p-3 transition-colors hover:border-primary/40',
         card?.wrapper,
       )}
     >
       <div
         className={cn(
-          'flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-slate-200',
+          'flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-muted text-muted-foreground',
           card?.icon?.wrapper,
         )}
       >
@@ -429,7 +431,7 @@ export const FilePreviewCard = ({
         </p>
         <span
           className={cn(
-            'flex items-center gap-2 text-xs text-accent-foreground',
+            'flex items-center gap-2 text-xs text-muted-foreground',
             card?.label?.size,
           )}
         >
@@ -449,7 +451,9 @@ export const FilePreviewCard = ({
           )}
           type="button"
         >
-          <Trash2 className={cn('h-4 w-4 text-red-500', card?.button?.icon)} />
+          <Trash2
+            className={cn('h-4 w-4 text-destructive', card?.button?.icon)}
+          />
         </Button>
       )}
     </div>
@@ -489,12 +493,12 @@ function getFileIcon(file: Media | File, className?: string) {
 
   // PDF files
   if (fileType.includes('pdf') || fileType === 'application/pdf') {
-    return <FileText className={cn('h-8 w-8 text-red-500', className)} />;
+    return <FileText className={cn('h-8 w-8 text-destructive', className)} />;
   }
 
   // Video files
   if (fileType.startsWith('video/')) {
-    return <Video className={cn('h-8 w-8 text-purple-500', className)} />;
+    return <Video className={cn('h-8 w-8 text-primary', className)} />;
   }
 
   // Text files
@@ -504,11 +508,15 @@ function getFileIcon(file: Media | File, className?: string) {
     fileType.includes('word') ||
     fileType.includes('msword')
   ) {
-    return <FileType className={cn('h-8 w-8 text-blue-500', className)} />;
+    return (
+      <FileType className={cn('h-8 w-8 text-accent-foreground', className)} />
+    );
   }
 
   // Default icon for unknown types
-  return <FileText className={cn('h-8 w-8 text-gray-500', className)} />;
+  return (
+    <FileText className={cn('h-8 w-8 text-muted-foreground', className)} />
+  );
 }
 
 function formatFileSize(bytes: number): string {

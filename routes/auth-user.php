@@ -11,18 +11,21 @@ use App\Http\Controllers\OnboardingController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\TeamController;
+use App\Http\Middleware\EnsureUserIsOnboarded;
 use Illuminate\Foundation\Http\Middleware\HandlePrecognitiveRequests;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/onboarding', [OnboardingController::class, 'index'])
-    ->middleware(['auth'])
-    ->name('onboarding');
+Route::middleware([EnsureUserIsOnboarded::class])->group(function () {
+    Route::get('/onboarding', [OnboardingController::class, 'index'])
+        ->middleware(['auth'])
+        ->name('onboarding');
 
-Route::post('/onboarding', [OnboardingController::class, 'store'])
-    ->middleware(['auth', 'precognitive'])
-    ->name('onboarding.store');
+    Route::post('/onboarding', [OnboardingController::class, 'store'])
+        ->middleware(['auth', 'precognitive'])
+        ->name('onboarding.store');
 
-Route::inertia('/account-created', 'onboarding/success')->name('onboarding.success');
+    Route::inertia('/account-created', 'onboarding/success')->name('onboarding.success');
+});
 
 Route::middleware(['auth', 'verified', 'onboarded'])->group(function () {
     Route::inertia('/verify-account', 'auth/account-verification')->name('account-verification');

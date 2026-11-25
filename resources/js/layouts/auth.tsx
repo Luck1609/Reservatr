@@ -30,17 +30,18 @@ export default function AuthLayout({
 
   return (
     <NoticeProvider>
-      <div className="min-h-screen bg-background px-4 py-4 sm:px-6 lg:px-10 lg:py-6">
+      <div className="flex min-h-screen bg-background px-4 py-4 sm:px-6 lg:px-10 lg:py-6">
         <div
           className={cn(
-            'max-h-[] mx-auto flex min-h-[calc(100dvh-2rem)] max-w-360 flex-col overflow-hidden rounded-4xl border border-[#e2ebe6] bg-card shadow-[0_24px_70px_rgba(34,60,70,0.12)] lg:grid lg:min-h-[calc(100dvh-3rem)] lg:grid-cols-[minmax(350px,0.86fr)_minmax(0,1.14fr)] dark:border-[#e2ebe6]/10',
+            'm-auto flex max-w-360 flex-col overflow-hidden rounded-4xl shadow-xl lg:grid lg:grid-cols-[minmax(350px,0.86fr)_minmax(0,1.14fr)]',
+            // 'mx-auto flex min-h-[calc(100dvh-2rem)] max-w-360 flex-col overflow-hidden rounded-4xl shadow-xl lg:grid lg:min-h-[calc(100dvh-3rem)] lg:grid-cols-[minmax(350px,0.86fr)_minmax(0,1.14fr)]',
             classNames?.wrapper,
           )}
         >
-          <aside className="relative hidden overflow-hidden p-8 text-white lg:flex lg:flex-col lg:p-10 xl:p-12">
+          <aside className="relative hidden overflow-hidden bg-foreground p-8 text-primary-foreground lg:flex lg:flex-col lg:p-10 xl:p-12">
             <div className="pointer-events-none absolute inset-0 overflow-hidden">
-              <div className="absolute -top-24 -right-24 size-80 rounded-full bg-[#0f8a62]/35 blur-3xl" />
-              <div className="absolute -bottom-36 -left-24 size-96 rounded-full bg-[#f0a46e]/20 blur-3xl" />
+              <div className="absolute -top-24 -right-24 size-80 rounded-full bg-primary/35 blur-3xl" />
+              <div className="absolute -bottom-36 -left-24 size-96 rounded-full bg-accent/30 blur-3xl" />
               {backgroundImage && (
                 <div
                   className="absolute inset-0 bg-cover bg-center opacity-[0.08] mix-blend-screen"
@@ -55,7 +56,7 @@ export default function AuthLayout({
               className="relative z-10 flex w-fit items-center gap-2.5"
             >
               <AppLogoIcon />
-              <span className="text-[1.15rem] font-bold tracking-[-0.04em] text-white">
+              <span className="text-[1.15rem] font-bold tracking-[-0.04em]">
                 Reservatr
               </span>
             </Link>
@@ -67,72 +68,69 @@ export default function AuthLayout({
             )}
 
             <div className="relative z-10 mt-auto max-w-lg">
-              <p className="text-[11px] font-bold tracking-[0.16em] text-[#8fe0bb] uppercase">
+              <p className="text-[11px] font-bold tracking-[0.16em] text-primary uppercase">
                 The calmer way to book
               </p>
               <h2 className="mt-4 max-w-md text-4xl leading-[1.02] font-bold tracking-[-0.06em] xl:text-5xl">
                 Make room for work that matters.
               </h2>
-              <p className="mt-5 max-w-md text-sm leading-6 text-[#b8c9c7]">
+              <p className="mt-5 max-w-md text-sm leading-6 text-primary-foreground/70">
                 Reservatr keeps your availability, clients, and appointments in
                 one thoughtful place.
               </p>
 
-              <div className="mt-9 rounded-3xl border border-white/10 bg-white/8 p-4 shadow-[0_18px_40px_rgba(0,0,0,0.14)] backdrop-blur-md">
-                <div className="flex items-center justify-between border-b border-white/10 pb-3">
+              <div className="mt-9 rounded-3xl border border-primary-foreground/10 bg-primary-foreground/8 p-4 shadow-[0_18px_40px_rgba(0,0,0,0.14)] backdrop-blur-md">
+                <div className="flex items-center justify-between border-b border-primary-foreground/10 pb-3">
                   <div className="flex items-center gap-2.5">
-                    <div className="flex size-8 items-center justify-center rounded-xl bg-[#0f8a62] text-[#d9f7e8]">
+                    <div className="flex size-8 items-center justify-center rounded-xl bg-primary text-primary-foreground">
                       <CalendarCheck2 aria-hidden="true" className="size-4" />
                     </div>
                     <div>
-                      <p className="text-[11px] font-bold text-white">
+                      <p className="text-[11px] font-bold text-primary-foreground">
                         Today&apos;s schedule
                       </p>
-                      <p className="text-[9px] text-[#9bb2ae]">
+                      <p className="text-[9px] text-primary-foreground/60">
                         Everything in one view
                       </p>
                     </div>
                   </div>
-                  <span className="rounded-full bg-[#d9f7e8]/10 px-2 py-1 text-[9px] font-semibold text-[#9be2c2]">
+                  <span className="rounded-full bg-primary/15 px-2 py-1 text-[9px] font-semibold text-primary">
                     3 bookings
                   </span>
                 </div>
 
                 <div className="space-y-2.5 pt-3">
-                  <div className="flex items-center gap-3 rounded-2xl bg-white/8 px-3 py-2.5">
+                  <div className="flex items-center gap-3 rounded-2xl bg-primary-foreground/8 px-3 py-2.5">
                     <span className="size-2 rounded-full bg-primary" />
                     <div className="min-w-0 flex-1">
-                      <p className="truncate text-[10px] font-bold text-white">
+                      <p className="truncate text-[10px] font-bold text-primary-foreground">
                         Brand strategy call
                       </p>
-                      <p className="mt-0.5 flex items-center gap-1 text-[9px] text-[#9bb2ae]">
+                      <p className="mt-0.5 flex items-center gap-1 text-[9px] text-primary-foreground/60">
                         <Clock3 aria-hidden="true" className="size-3" /> 9:00 –
                         10:00 AM
                       </p>
                     </div>
-                    <Check
-                      aria-hidden="true"
-                      className="size-4 text-primary"
-                    />
+                    <Check aria-hidden="true" className="size-4 text-primary" />
                   </div>
-                  <div className="flex items-center gap-3 rounded-2xl bg-[#806edc]/20 px-3 py-2.5">
-                    <span className="size-2 rounded-full bg-[#b9adff]" />
+                  <div className="flex items-center gap-3 rounded-2xl bg-accent/20 px-3 py-2.5">
+                    <span className="size-2 rounded-full bg-accent" />
                     <div className="min-w-0 flex-1">
-                      <p className="truncate text-[10px] font-bold text-white">
+                      <p className="truncate text-[10px] font-bold text-primary-foreground">
                         Website consultation
                       </p>
-                      <p className="mt-0.5 text-[9px] text-[#c0b8ec]">
+                      <p className="mt-0.5 text-[9px] text-primary-foreground/70">
                         10:30 – 11:30 AM
                       </p>
                     </div>
-                    <span className="rounded-full bg-white/10 px-2 py-1 text-[8px] font-semibold text-[#ddd8ff]">
+                    <span className="rounded-full bg-primary-foreground/10 px-2 py-1 text-[8px] font-semibold text-primary-foreground/80">
                       Paid
                     </span>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-5 flex items-center gap-2 text-[10px] text-[#9bb2ae]">
+              <div className="mt-5 flex items-center gap-2 text-[10px] text-primary-foreground/60">
                 <Users aria-hidden="true" className="size-3.5 text-primary" />
                 Join teams building more space into their day.
               </div>
@@ -140,7 +138,7 @@ export default function AuthLayout({
           </aside>
 
           <section className="flex min-w-0 flex-1 flex-col bg-card">
-            <header className="flex items-center justify-between px-5 py-5 sm:px-8 lg:px-12 lg:py-7">
+            <header className="hidden items-center justify-between px-5 py-5 sm:px-8 md:flex lg:px-12 lg:py-7">
               <Link
                 href={home()}
                 aria-label="Reservatr home"
@@ -151,7 +149,7 @@ export default function AuthLayout({
               <div className="hidden lg:block" />
               <Link
                 href={redirect ? redirect.href : home()}
-                className="inline-flex items-center gap-1.5 text-xs font-bold text-[#6b7e7e] transition-colors hover:text-[#0f8a62] sm:text-sm"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-muted-foreground transition-colors hover:text-primary sm:text-sm"
               >
                 {redirect?.icon && <redirect.icon className="size-3.5" />}
                 {redirect ? redirect.label : 'Back to home'}
@@ -161,7 +159,7 @@ export default function AuthLayout({
               </Link>
             </header>
 
-            <div className="flex flex-1 items-center px-5 pb-8 sm:px-8 lg:px-12 lg:pb-12">
+            <div className="flex flex-1 items-center px-5 pt-8 pb-8 sm:px-8 lg:px-12 lg:pt-0 lg:pb-12">
               <div
                 className={cn(
                   'mx-auto w-full max-w-124',
@@ -169,14 +167,14 @@ export default function AuthLayout({
                 )}
               >
                 <div className="mb-8">
-                  <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#c7e8d8] bg-[#effaf4] px-3 py-1.5 text-[10px] font-bold tracking-[0.12em] text-[#0f8a62] uppercase">
+                  <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-input bg-secondary px-3 py-1.5 text-[10px] font-bold tracking-[0.12em] text-primary uppercase">
                     <Sparkles aria-hidden="true" className="size-3" /> Reservatr
                     account
                   </div>
-                  <h1 className="text-3xl leading-tight font-bold tracking-[-0.055em] text-emerald-950 sm:text-4xl">
+                  <h1 className="text-3xl leading-tight font-bold tracking-[-0.055em] text-foreground sm:text-4xl">
                     {title}
                   </h1>
-                  <p className="mt-3 max-w-lg text-sm leading-6 text-[#718282] sm:text-base">
+                  <p className="mt-3 max-w-lg text-sm leading-6 text-muted-foreground sm:text-base">
                     {description}
                   </p>
                 </div>
@@ -185,17 +183,17 @@ export default function AuthLayout({
               </div>
             </div>
 
-            <footer className="flex flex-col gap-3 border-t border-[#edf1ef] px-5 py-5 text-[11px] text-[#8a9a9b] sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-12 dark:border-[#edf1ef]/10">
+            <footer className="hidden flex-col gap-3 border-t border-border px-5 py-5 text-[11px] text-muted-foreground sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:flex lg:px-12">
               <span>Simple scheduling for growing businesses.</span>
               <div className="flex items-center gap-4">
                 <Link
-                  className="transition-colors hover:text-[#0f8a62]"
+                  className="transition-colors hover:text-primary"
                   href={privacy()}
                 >
                   Privacy
                 </Link>
                 <Link
-                  className="transition-colors hover:text-[#0f8a62]"
+                  className="transition-colors hover:text-primary"
                   href={terms()}
                 >
                   Terms

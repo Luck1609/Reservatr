@@ -18,7 +18,7 @@ export default function BasicInfo({
   console.log('Category listing', categories, props);
 
   return (
-    <div className="relative grid w-full gap-y-6 rounded-xl bg-card p-6 lg:p-8">
+    <div className="relative grid w-full gap-y-6 rounded-[26px] border border-border bg-card p-6 shadow-lg shadow-primary/5 lg:p-8">
       <div className="w-1/2">
         <FileUploader
           name="avatar"
