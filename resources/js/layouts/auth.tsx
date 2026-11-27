@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import AppLogo from '@/components/app-logo';
 import AppLogoIcon from '@/components/app-logo-icon';
+import PwaInstallAction from '@/components/pwa-install-action';
 import { NoticeProvider } from '@/contexts/notice-context';
 import { cn } from '@/lib/utils';
 import { home, privacy, terms } from '@/routes';
@@ -183,9 +184,10 @@ export default function AuthLayout({
               </div>
             </div>
 
-            <footer className="hidden flex-col gap-3 border-t border-border px-5 py-5 text-[11px] text-muted-foreground sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:flex lg:px-12">
+            <footer className="flex flex-col gap-3 border-t border-border px-5 py-5 text-[11px] text-muted-foreground sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-12">
               <span>Simple scheduling for growing businesses.</span>
               <div className="flex items-center gap-4">
+                <PwaInstallAction />
                 <Link
                   className="transition-colors hover:text-primary"
                   href={privacy()}

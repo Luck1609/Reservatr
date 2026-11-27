@@ -4,6 +4,7 @@ import AppLogo from '@/components/app-logo';
 import { AppShell } from '@/components/app-shell';
 import { Breadcrumbs } from '@/components/breadcrumbs';
 import { NavUser } from '@/components/nav-user';
+import PwaInstallAction from '@/components/pwa-install-action';
 import {
   Sidebar,
   SidebarContent,
@@ -91,6 +92,11 @@ export default function AppLayout({
           </header>
 
           {children}
+
+          <footer className="flex items-center justify-between gap-4 border-t border-sidebar-border/50 px-6 py-4 text-xs text-muted-foreground md:px-4">
+            <span>Reservatr · Simple scheduling for growing businesses.</span>
+            <PwaInstallAction />
+          </footer>
         </AppContent>
       </AppShell>
     </NoticeProvider>

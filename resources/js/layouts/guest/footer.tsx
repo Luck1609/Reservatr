@@ -1,6 +1,7 @@
 import { Link } from '@inertiajs/react';
 import AppLogo from '@/components/app-logo';
 import Container from '@/components/container';
+import PwaInstallAction from '@/components/pwa-install-action';
 import { about, contact, login, privacy, register, terms } from '@/routes';
 
 export default function Footer() {
@@ -77,6 +78,7 @@ export default function Footer() {
               >
                 Create account
               </Link>
+              <PwaInstallAction />
               <Link
                 className="text-[#53696b] hover:text-[#0f8a62]"
                 href={contact()}

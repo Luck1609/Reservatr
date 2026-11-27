@@ -2,15 +2,15 @@ import { createInertiaApp } from '@inertiajs/react';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import PwaInstallPrompt from '@/components/pwa-install-prompt';
 import { Toaster } from '@/components/ui/sonner';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { initializeTheme } from '@/hooks/use-appearance';
-import PwaInstallPrompt from '@/components/pwa-install-prompt';
 import AppLayout from '@/layouts/app';
 import SettingsLayout from '@/layouts/settings';
 import AuthLayout from './layouts/auth';
 import GuestLayout from './layouts/guest';
-import { registerServiceWorker } from './pwa';
+import { PwaInstallProvider, registerServiceWorker } from './pwa';
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
@@ -39,11 +39,13 @@ createInertiaApp({
   setup({ el, App, props }) {
     createRoot(el).render(
       <StrictMode>
-        <TooltipProvider delayDuration={0}>
-          <App {...props} />
-          <Toaster />
-          <PwaInstallPrompt />
-        </TooltipProvider>
+        <PwaInstallProvider>
+          <TooltipProvider delayDuration={0}>
+            <App {...props} />
+            <Toaster />
+            <PwaInstallPrompt />
+          </TooltipProvider>
+        </PwaInstallProvider>
       </StrictMode>,
     );
   },
