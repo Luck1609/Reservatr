@@ -5,10 +5,12 @@ import { createRoot } from 'react-dom/client';
 import { Toaster } from '@/components/ui/sonner';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { initializeTheme } from '@/hooks/use-appearance';
+import PwaInstallPrompt from '@/components/pwa-install-prompt';
 import AppLayout from '@/layouts/app';
 import SettingsLayout from '@/layouts/settings';
 import AuthLayout from './layouts/auth';
 import GuestLayout from './layouts/guest';
+import { registerServiceWorker } from './pwa';
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
@@ -40,6 +42,7 @@ createInertiaApp({
         <TooltipProvider delayDuration={0}>
           <App {...props} />
           <Toaster />
+          <PwaInstallPrompt />
         </TooltipProvider>
       </StrictMode>,
     );
@@ -51,3 +54,4 @@ createInertiaApp({
 
 // This will set light / dark mode on load...
 initializeTheme();
+registerServiceWorker();
